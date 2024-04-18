@@ -6,7 +6,7 @@ import rupiah from "../utils";
 const SingleCard = ({ data }) => {
     return (
         <Box
-            bg="#008080" // Teal color
+            bg="#000" // Teal color
             color="#fff" // White text color
             textAlign="left"
             textDecoration="none"

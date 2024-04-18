@@ -6,7 +6,7 @@
 } */
 
 .loginOptionsContainer {
-    background: teal;
+    background: rgb(250, 251, 251);
     color: white;
     min-height: 100vh;
     display: flex;

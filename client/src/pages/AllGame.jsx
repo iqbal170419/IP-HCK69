@@ -48,12 +48,12 @@ const AllGame = () => {
     console.log(games);
 
     return (
-        <Box bgColor={"#3c3a9f"}>
+        <Box bgColor={"#FFFF"}>
             <Navbar></Navbar>
             <Box w={"90%"}>
                 <Flex justifyContent={"center"}>
-                    <Text textColor={"#F8EDFF"} mt={50} fontSize={"200%"}>
-                        Games Available on Gametropolis
+                    <Text textColor={"#000"} mt={50} fontSize={"300%"}>
+                        Games Available on GameInvitation
                     </Text>
                 </Flex>
                 {/* <SortDropdown /> */}

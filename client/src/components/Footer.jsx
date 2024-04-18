@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <Box
             as="footer"
-            bg={"#191919"}
+            bg={"#000"}
             color={useColorModeValue("gray.600", "gray.300")}
             py={6}
             px={4}
@@ -47,7 +47,7 @@ const Footer = () => {
                             icon={<FaLinkedin />}
                             variant="ghost"
                             size="lg"
-                            fill={"#EEE2DE"}
+                            fill={"#ffff"}
                         />
                     </Link>
                 </Flex>

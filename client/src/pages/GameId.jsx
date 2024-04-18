@@ -109,7 +109,7 @@ export const GameId = () => {
                         <div id="rgametrailer" className="rgamevideo">
                             <Flex
                                 mt={10}
-                                backgroundColor="#43e5e5"
+                                backgroundColor="#000"
                                 color="white"
                                 ml={"7.3%"}
                                 mr={"7.3%"}

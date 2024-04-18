@@ -41,7 +41,7 @@ const Card = () => {
         <Box
             width="20%"
             padding="0px 3px"
-            backgroundColor="Teal"
+            backgroundColor="Black"
             color="white"
             borderRadius="10px"
             p={4}
@@ -63,7 +63,7 @@ const Card = () => {
                                     key={el.id}
                                     flexDirection={"column"}
                                     alignContent={"center"}
-                                    bg="Coral"
+                                    bg="Black"
                                     borderRadius="md"
                                     overflow="hidden"
                                     mb={4}

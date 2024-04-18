@@ -43,7 +43,7 @@ const Filter = () => {
             width="20%"
             padding="0px 3px"
             mx={10}
-            backgroundColor="Teal"
+            backgroundColor="Black"
             color="white"
             borderRadius="10px"
             p={4}
@@ -60,7 +60,7 @@ const Filter = () => {
                                 key={el.id}
                                 flexDirection="column"
                                 alignContent="center"
-                                bg="Coral"
+                                bg="Black"
                                 borderRadius="md"
                                 overflow="hidden"
                                 mb={4}

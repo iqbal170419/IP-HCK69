@@ -47,7 +47,7 @@ const PopularCards = () => {
         <Box
             ml={"7.3%"}
             mr={"7.3%"}
-            backgroundColor="Teal"
+            backgroundColor="Black"
             borderRadius="10px"
             p={4}
         >

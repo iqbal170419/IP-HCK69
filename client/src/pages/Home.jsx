@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Card2 from '../components/Card2'
 import Card3 from '../components/Card3'
-import Filter from "../components/filter4"
+import Filter from "../components/Card4"
 
 const Home = () => {
     return (

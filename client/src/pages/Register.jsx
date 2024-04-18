@@ -50,11 +50,11 @@ export const Register = () => {
     return (
         <Box bgColor={"#e9d01d"}>
             <Navbar></Navbar>
-            <Flex bgColor="Teal" minH="100vh" align="center" justify="center">
+            <Flex bgColor="White" minH="100vh" align="center" justify="center">
                 <Flex
                     flexDirection={"column"}
                     height={600}
-                    bgColor="#202020"
+                    bgColor="#000"
                     px={40}
                     borderRadius={5}
                     justifyContent={"center"}
@@ -68,7 +68,7 @@ export const Register = () => {
                             type="text"
                             name="userName"
                             id="userName"
-                            placeholder="user name"
+                            placeholder="username"
                             onChange={handleInput}
                             mb={4}
                             textColor={"#F8EDFF"}
@@ -77,7 +77,7 @@ export const Register = () => {
                             type="text"
                             name="email"
                             id="email"
-                            placeholder="Email Address"
+                            placeholder="Email"
                             onChange={handleInput}
                             mb={4}
                             textColor={"#F8EDFF"}
@@ -110,7 +110,7 @@ export const Register = () => {
                             Privacy Policy
                         </Text>
                     </form>
-                    <Text textAlign="center" color="#f4f4f480" fontSize="sm" mb={4}>
+                    <Text textAlign="center" color="#ffff" fontSize="sm" mb={4}>
                         Have an Account ?{" "}
                         <Link to="/Login">
                             <Text as="span" textDecoration="underline">

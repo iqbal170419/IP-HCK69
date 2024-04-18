@@ -99,13 +99,13 @@ export const Login = () => {
     }, []);
 
     return (
-        <Box bgColor="blueviolet">
+        <Box bgColor="white">
             <Navbar></Navbar>
             <Flex bgColor="Tosca" minH="100vh" align="center" justify="center">
                 <Flex
                     flexDirection={"column"}
                     height={600}
-                    bgColor="#202020"
+                    bgColor="#000"
                     px={40}
                     borderRadius={5}
                     justifyContent={"center"}
@@ -119,7 +119,7 @@ export const Login = () => {
                             type="text"
                             name="email"
                             id="email"
-                            placeholder="Email Address"
+                            placeholder="Email"
                             onChange={handleChange}
                             mb={4}
                             textColor={"#F8EDFF"}
@@ -159,7 +159,7 @@ export const Login = () => {
                             Privacy Policy
                         </Text>
                     </form>
-                    <Text textAlign="center" color="#f4f4f480" fontSize="sm" mb={4}>
+                    <Text textAlign="center" color="#ffff" fontSize="sm" mb={4}>
                         Don't Have an Account ?{" "}
                         <Link to="/Register">
                             <Text as="span" textDecoration="underline">

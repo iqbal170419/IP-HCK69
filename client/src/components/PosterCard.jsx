@@ -42,10 +42,10 @@ const PosterCard = () => {
     return (
         <Box mx={"2.5%"}>
             <Box
-                width="90%"
-                padding="20px"
+                width="93%"
+                padding="22px"
                 margin="auto"
-                backgroundColor="Teal"
+                backgroundColor="White"
                 borderRadius="10px"
             >
                 <Box display="flex" gap="5">
@@ -56,8 +56,8 @@ const PosterCard = () => {
                                 <Box
                                     key={el.id}
                                     id="poster1Udit"
-                                    bg="Coral"
-                                    color="LemonZest"
+                                    bg="Black"
+                                    color="White"
                                     transition="all 0.3s ease-in-out"
                                     cursor="pointer"
                                     opacity="1"
