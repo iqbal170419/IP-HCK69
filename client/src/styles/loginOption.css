@@ -1,0 +1,189 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  font-family: "brutal", sans-serif;
+  text-decoration: none;
+} */
+
+.loginOptionsContainer {
+    background: teal;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.optionContainerLogin {
+    display: flex;
+    background-color: #2a2a2a;
+    flex-direction: column;
+    padding: 50px 15px;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+
+.logo {
+    font-size: 50px;
+    color: #FFFFFF;
+}
+
+.epic {
+    background-color: #353535;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.fb {
+    background-color: #3261A3;
+    color: white;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.google {
+    background-color: #d84848;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.xbox {
+    background-color: #027D00;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.psn {
+    background-color: #0063C5;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.ninten {
+    background-color: #E90000;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.steam {
+    background-color: #145C8F;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.apple {
+    background-color: #FFFFFF;
+    color: #121212;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 25%;
+    border-radius: 4px;
+    height: 100%;
+}
+
+h4 {
+    color: #FFFFFF;
+}
+
+.allowedOptionLogin {
+    max-width: 370px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #484848;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.allowedOptionLogin>p {
+    margin: 15px;
+}
+
+.allowedOptionLogin :link {
+    margin: 15px;
+    margin-top: 35px;
+    text-decoration: none;
+}
+
+
+.logOption {
+    max-width: 370px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #484848;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+.logOption>p {
+    margin: 15px;
+}
+
+.abled {
+    cursor: pointer;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.loginOptionsName {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+.option:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.logFooter {
+    color: #f4f4f480;
+    font-size: 14px;
+    line-height: 1.25rem;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin: 0 14px;
+}
+
+.underline {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .optionContainerLogin {
+        max-width: 470px;
+        margin: 50px auto;
+        padding: 45px 60px 45px;
+        border-radius: 4px;
+    }
+}

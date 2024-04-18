@@ -11,7 +11,7 @@ import Filter from "../components/filter4"
 
 const Home = () => {
     return (
-        <Box bgColor={"#f1df5c"}>
+        <Box bgColor={"#0000"}>
             <Navbar></Navbar>
             <h6 style={{ fontSize: '5rem', textAlign: "center", fontWeight: 'bold', color: '#333', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>GAMETROPOLIS</h6>
 
