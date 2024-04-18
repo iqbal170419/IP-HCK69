@@ -1,5 +1,5 @@
 const midtransClient = require("midtrans-client");
-const { Transaction, Game } = require("../models");
+const { Transaction, Letter } = require("../models");
 
 class TransactionController {
     static async InitiateMidTrans(req, res, next) {

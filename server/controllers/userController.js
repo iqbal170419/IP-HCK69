@@ -57,6 +57,7 @@ class UserController {
 
     static async googleLogin(req, res, next) {
         try {
+
             let google_token = req.headers.google_token;
             let { payload } = await google_oauth_client.verifyIdToken({
                 idToken: google_token,
