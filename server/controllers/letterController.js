@@ -68,107 +68,140 @@ class LetterController {
             next(error);
         }
     }
-    static async getFav(req, res, next) {
+
+    static async updateGame(req, res, next) {
         try {
-            const { id } = req.user;
-            const favorite = await Favorite.findAll({
-                where: {
-                    UserId: id,
-                },
-                include: {
-                    model: Letter
-                },
-            });
-
-            res.status(200).json(favorite);
-        } catch (error) {
-            console.log(error);
-            next(error);
-        }
-    }
-    static async addFav(req, res, next) {
-        try {
-            const { id } = req.user;
-            const { gameId } = req.params;
-
-            const findData = await Letter.findByPk(gameId);
-            if (!findData) {
-                throw { name: "NotFound" };
-            }
-
-            const dataFav = await Favorite.findOne({
-                where: {
-                    UserId: id,
-                    gameId: gameId,
-                },
-            });
-
-            if (dataFav) {
-                throw { name: "GameAdded" };
-            }
-
-            const newFav = await Favorite.create({
-                UserId: id,
-                gameId: GameId,
-            });
-
-            //   console.log(newFav, ">>>>>>>>");
-            res.status(201).json(`${findData.name} Added to Favorites`);
-        } catch (error) {
-            console.log(error);
-            next(error);
-        }
-    }
-
-    static async editFav(req, res, next) {
-        try {
-
-            const { gameId } = req.params;
-
-            const game = await Letter.findByPk(gameId);
-
+            const { id } = req.params;
+            const game = await Letter.findByPk(id);
 
             if (!game) {
                 throw { name: "NotFound" };
             }
+            const updatedGame = await game.update(req.body);
+            res.status(200).json(updatedGame)
 
-
-            const updated = await game.update({
-                price
-            });
-
-            res.status(200).json(updated);
         } catch (error) {
-            console.log(error);
-            next(error);
+            next(error)
         }
     }
 
-
-
-    static async deleteFav(req, res, next) {
+    static async deleteGame(req, res, next) {
         try {
             const { id } = req.params;
-            console.log(id, "<<<<<<");
+            const game = await Letter.findByPk(id);
 
-            const findGame = await Letter.findByPk(id);
-            if (!findGame) {
-                throw {
-                    name: "NotFoundId",
-                    id,
-                };
+            if (!game) {
+                throw { name: "NotFound" }
             }
+            await game.destroy();
 
-            await findGame.destroy();
+            res.status(200).json({ message: `${game.name} has been deleted ` });
 
-            res
-                .status(200)
-                .json({ message: `Successfully Removed From My Favorite` });
         } catch (error) {
-            console.log(error);
-            next(error);
+            next(error)
         }
     }
+    // static async getFav(req, res, next) {
+    //     try {
+    //         const { id } = req.user;
+    //         const favorite = await Favorite.findAll({
+    //             where: {
+    //                 UserId: id,
+    //             },
+    //             include: {
+    //                 model: Letter
+    //             },
+    //         });
+
+    //         res.status(200).json(favorite);
+    //     } catch (error) {
+    //         console.log(error);
+    //         next(error);
+    //     }
+    // }
+    // static async addFav(req, res, next) {
+    //     try {
+    //         const { id } = req.user;
+    //         const { gameId } = req.params;
+
+    //         const findData = await Letter.findByPk(gameId);
+    //         if (!findData) {
+    //             throw { name: "NotFound" };
+    //         }
+
+    //         const dataFav = await Favorite.findOne({
+    //             where: {
+    //                 UserId: id,
+    //                 gameId: gameId,
+    //             },
+    //         });
+
+    //         if (dataFav) {
+    //             throw { name: "GameAdded" };
+    //         }
+
+    //         const newFav = await Favorite.create({
+    //             UserId: id,
+    //             gameId: GameId,
+    //         });
+
+    //         //   console.log(newFav, ">>>>>>>>");
+    //         res.status(201).json(`${findData.name} Added to Favorites`);
+    //     } catch (error) {
+    //         console.log(error);
+    //         next(error);
+    //     }
+    // }
+
+    // static async editFav(req, res, next) {
+    //     try {
+
+    //         const { gameId } = req.params;
+
+    //         const game = await Letter.findByPk(gameId);
+
+
+    //         if (!game) {
+    //             throw { name: "NotFound" };
+    //         }
+
+
+    //         const updated = await game.update({
+    //             price
+    //         });
+
+    //         res.status(200).json(updated);
+    //     } catch (error) {
+    //         console.log(error);
+    //         next(error);
+    //     }
+    // }
+
+
+
+    // static async deleteFav(req, res, next) {
+    //     try {
+    //         const { id } = req.params;
+    //         console.log(id, "<<<<<<");
+
+    //         const findGame = await Letter.findByPk(id);
+    //         if (!findGame) {
+    //             throw {
+    //                 name: "NotFoundId",
+    //                 id,
+    //             };
+    //         }
+
+    //         await findGame.destroy();
+
+    //         res
+    //             .status(200)
+    //             .json({ message: `Successfully Removed From My Favorite` });
+    //     } catch (error) {
+    //         console.log(error);
+    //         next(error);
+    //     }
+    // }
 }
 
 module.exports = LetterController;

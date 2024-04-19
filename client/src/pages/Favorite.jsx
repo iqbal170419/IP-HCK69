@@ -9,7 +9,7 @@ import { fetchFav } from "../redux/favSlicec";
 const Favorite = () => {
    
     const dispatch = useDispatch();
-    const favorites = useSelector((state) => state.favorites.list);
+    const favorites = useSelector((state) => state.favorites);
 
 
 

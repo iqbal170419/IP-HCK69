@@ -58,7 +58,7 @@ export const GameId = () => {
                     /* You may add your own implementation here */
                     Swal.fire({
                         title: "Success",
-                        text: "wating your payment!",
+                        text: "waiting your payment!",
                         confirmButtonText: "OK",
                     });
                     console.log(result);
@@ -89,6 +89,61 @@ export const GameId = () => {
                 text: error,
                 icon: "error",
                 confirmButtonText: "OK",
+            });
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const handleDelete = async (id) => {
+        try{
+            const token = `Bearer ${localStorage.getItem('access_token')}`
+            const response = await axios.delete(`http://localhost:3000/${id}`, {
+                headers : {
+                    "Authorization" : token
+                }
+            })
+            navigate('/')
+        }catch(error){
+            console.log(error);
+            Swal.fire({
+                icon: "error",
+                title: `Error`
+            })
+        }
+    }
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const handleUpdate = async (id) => {
+        try {
+            const requestBody = { price, background_image, rating }
+            await axios({
+                method: "UPDATE",
+                url: `http://localhost:3000/${id}`, requestBody,
+                headers: {
+                    Authorization: "Bearer " + localStorage.access_token,
+                },
+            });
+
+            fetchData();
+
+            Swal.fire({
+                title: "Good job!",
+                text: response.data.message,
+                icon: "success",
+                timer: 2000,
+
+            });
+        } catch (error) {
+            console.log(error);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                
             });
         }
     };
@@ -188,6 +243,22 @@ export const GameId = () => {
                         >
                             Buy Game
                         </button>
+                        <button
+                            style={{ borderRadius: "10px" }}
+                            id="raddcart"
+                            onClick={handleUpdate}
+                        >
+                            Update Game
+                        </button>
+                        <button
+                            style={{ borderRadius: "10px" }}
+                            id="raddcart"
+                            onClick={handleDelete}
+                        >
+                            Delete Game
+                        </button>
+                        
+                        
                         <br />
                         <div>
                             <span className="rcompanypublisher">

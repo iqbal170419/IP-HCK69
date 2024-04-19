@@ -14,10 +14,10 @@ router.post("/register", UserController.register)
 router.post("/login-google", UserController.googleLogin)
 router.get("/payment/:id", authentication, TransactionController.InitiateMidTrans)
 
-router.get("/favorite", GameController.getFav);
-router.post("/favorite/:gameId", GameController.addFav);
-router.put("/favorite/:gameId", GameController.editFav);
-router.delete("/favorite/:gameId", GameController.deleteFav);
+// router.get("/favorite", GameController.getFav);
+// router.post("/favorite/:gameId", GameController.addFav);
+// router.put("/favorite/:gameId", GameController.editFav);
+// router.delete("/favorite/:gameId", GameController.deleteFav);
 
 
 router.use(errorHandler)
