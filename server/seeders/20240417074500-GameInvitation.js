@@ -51,7 +51,7 @@ module.exports = {
           genre: item.genres[0].name,
           imgUrl_1: item.short_screenshots[0].image,
           imgUrl_2: item.short_screenshots[1].image,
-          imgUrl_3: item.short_screenshots[2].image,
+          imgUrl_3: item.short_screenshots[2].imagxe,
           imgUrl_4: item.short_screenshots[3].image,
           price: Math.floor(Math.random() * (100 - 50 + 1) + 50) * 1000,
           createdAt: new Date(),

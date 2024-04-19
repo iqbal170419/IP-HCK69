@@ -36,6 +36,15 @@ function Navbar() {
                         All Game
                     </Button>
                 </Link>
+                <Link to="/Favorite">
+                    <Button
+                        bg={"transparent"}
+                        textColor={"#F8EDFF"}
+                        _hover={{ bg: "transparent", borderBottom: "2px" }}
+                    >
+                        Favorite
+                    </Button>
+                </Link>
                 {/* {!localStorage.getItem("accessToken") ? (
         ""
         ) : (

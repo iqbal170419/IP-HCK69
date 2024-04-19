@@ -8,12 +8,15 @@ import { Register } from "../pages/Register";
 import { Login } from "../pages/Login";
 import { GameId } from "../pages/GameId";
 import YourGame from "../pages/YourGame";
+import DetailPage from "../pages/Detail";
+import Favorite from "../pages/Favorite";
+
 
 const Routers = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
-    }, 
+    },
     {
         path: "/Games",
         element: <AllGame />,
@@ -33,7 +36,16 @@ const Routers = createBrowserRouter([
     {
         path: "/Login",
         element: <Login />,
-    }
+    },
+    {
+        path: "/game/:id",
+        element: <DetailPage />,
+    },
+    {
+        path: "/favorite",
+        element: <Favorite />,
+    },
+
 ]);
 
 export default Routers
